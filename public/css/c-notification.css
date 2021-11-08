@@ -1,0 +1,52 @@
+
+.c-notification\/center {
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  right: var(--system-margin);
+  margin-left: auto;
+  width: 300px;
+  padding: var(--system-margin) 0;
+}
+
+.c-notification\/toggler {
+  z-index: 1030;
+  position: relative;
+  display: inline-block;
+  padding: calc(var(--system-margin) / 2);
+}
+
+.c-notification\/tab {
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+.c-notification\/tab:hover {
+  cursor: default;
+}
+
+.c-notification {
+  padding: calc(var(--system-margin) / 2);
+  width: calc(100% - var(--system-margin) * 2);
+  flex-wrap: wrap;
+  background-size: cover;
+  background-color: var(--bg-one-blur);
+  border-radius: var(--system-border);
+  z-index: 1030;
+  margin: var(--system-margin) auto;
+}
+
+.c-notification .t-body {
+  font-size: 0.9rem;
+}
+
+.c-notification .t-title,
+.c-notification .t-secondary {
+  display: inline-block;
+}
+
+.c-notification .t-secondary {
+  float: inline-end;
+}
