@@ -20,7 +20,7 @@ export default function Layout({ children }) {
         <meta name="theme-color" content="rgb(50, 50, 50)" media="(prefers-color-scheme: dark)" />
         <link rel="mask-icon" href="/cal-maskicon.svg" color="#000" />
         <link rel="stylesheet" href="/fonts/loadfonts.css" />
-        <link rel="stylesheet" href="/css/neumatter.css" />
+        <link rel="stylesheet" href="/neumatter.css" />
         <link rel="stylesheet" href="/css/misc-utility.css" />
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" /></noscript>
