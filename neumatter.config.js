@@ -1,6 +1,6 @@
 
-config = {
-  exportPath: "./public/",
+module.exports.config = {
+  exportPath: "./public/css/",
   colors: {
     primary: "default",
     secondary: "default",
@@ -36,5 +36,3 @@ config = {
 //  u_mpNonsystem: {},
   attributes: {},
 }
-
-exports.config = config;

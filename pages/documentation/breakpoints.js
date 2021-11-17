@@ -5,7 +5,7 @@ export default function NeuBreakpoints() {
   return (
     <>
     <Head>
-      <title>Morphic</title>
+      <title>neumatter</title>
       <meta property="og:description" key="description" content="Web Design, Typography, Iconography, and more..." />
     </Head>
           <div className="l-system-wrapper u-mx/0">
@@ -13,7 +13,7 @@ export default function NeuBreakpoints() {
             <h2 className="u-mb/system-33">Breakpoints</h2>
             <p className="u-mb/system">Created as a light-weight framework to help standardize layouts. It is a moderate utility first approach adding more custom options by adding utility and attribute classes to components.</p>
           </div>
-          <div className="l-row l-no-gutters u-flex-grow/1 u-mx/0 u-mb/system a-bg/convex-small a-rounded/100">
+          <div className="l-row l-no-gutters u-flex-grow/1 u-mx/0 u-mb/system a-bg/convex-small a-rounded/100 a-bg-gradient/right a-bg-gradient/primary">
             <div className="l-column/9 u-px/system u-py/system-50">
               <p className="u-m/0">Breakpoint :sm</p>
             </div>
