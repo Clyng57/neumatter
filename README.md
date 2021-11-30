@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# neumatter
 
-## Getting Started
+## Table of Contents
+1. [ Download ](#download) <br />
+2. [ Packages ](#packages) <br />
+    a. [ @neumatter/neucss ](#neucss) <br />
+        1. [ Install ](#install) <br />
+        2. [ Getting Started ](#gettingstarted) <br />
+        3. [ Generate Config File ](#genconfig) <br />
+        4. [ Configuration Options ](#config) <br />
+        5. [ Compile ](#compile) <br />
 
-First, run the development server:
+<a name="download"></a>
+### Download
+Download the /_lib directory
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<a name="packages"></a>
+### Packages
+1. [ @neumatter/neucss ](#neucss) <br />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a name="neucss"></a>
+#### @neumatter/neucss
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<a name="install"></a>
+##### Install
+Run:
+    
+    npm i @neumatter/neucss 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<a name="gettingstarted"></a>
+##### Getting Started
+Edit your package.json file and in the scripts write:
+    
+    "neucss": "./node_modules/.bin/neucss"
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<a name="genconfig"></a>
+##### Generate the neumatter.config file
+Run: 
+    
+    npm run neucss config
 
-## Learn More
+<a name="config"></a>
+##### Configuration Options
+To compile neumatter.css to a certain directory edit the exportPath in neumatter.config.
 
-To learn more about Next.js, take a look at the following resources:
+Edit colors, system margin & padding, system border radius, and exclude css from being compiled.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a name="compile"></a>
+##### Compile neumatter.css
+Run: 
+    
+    npm run neucss compile

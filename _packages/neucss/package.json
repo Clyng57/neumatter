@@ -1,0 +1,19 @@
+{
+  "name": "@neumatter/neucss",
+  "version": "1.2.5",
+  "description": "css generater",
+  "main": "index.js",
+  "keywords": [],
+  "author": "cal young",
+  "license": "MIT",
+  "bin": {
+    "neucss": "index.js"
+  },
+  "engines": {
+    "node": ">=14.13.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0"
+  }
+}

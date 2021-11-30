@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*! neumatter css */
+
+
+/*
+Credits:
+    Bootstrap and its contributors for class names and inspiration. Moreover, 
+    the containers, grid system and the flex utilities found in Halfmoon CSS 
+    are almost direct copies of the ones found in Bootstrap. Therefore, the 
+    following copyright notice is provided:
+    ---------------------------------------------------------------------------
+    Bootstrap (https://getbootstrap.com/)
+    Copyright 2011-2020 The Bootstrap Authors
+    Copyright 2011-2020 Twitter, Inc.
+    Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+    ---------------------------------------------------------------------------
+*/
+
+/*
+-------------------------------------------------------------------------------
+0.  Normalize CSS
+
+Notes:
+    ~ Normalize.css makes browsers render all elements more consistently and 
+    in line with modern standards. It precisely targets only the styles that 
+    need normalizing.
+    ~ normalize.css | MIT License | github.com/necolas/normalize.css
+    ~ This is a slighly customized version of normalize.css 8.0.1, 
+    specifically for dealing with Halfmoon CSS.
+    ~ Comments have been removed for the sake of compactness.
+-------------------------------------------------------------------------------
+*/
+
+/*
+============================================================================
+  VARIABLES
+    - Sets the base colors for text, bg, etc. It uses that to automatically
+      calculate the related colors/values.
+----------------------------------------------------------------------------
+*/
