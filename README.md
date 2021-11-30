@@ -18,35 +18,36 @@ Download the /_lib directory
 ### Packages
 1. [ @neumatter/neucss ](#neucss) <br />
 
+
 <a name="neucss"></a>
-#### @neumatter/neucss
+### @neumatter/neucss
 
 <a name="install"></a>
-##### Install
+#### Install
 Run:
     
     npm i @neumatter/neucss 
 
 <a name="gettingstarted"></a>
-##### Getting Started
+#### Getting Started
 Edit your package.json file and in the scripts write:
     
     "neucss": "./node_modules/.bin/neucss"
 
 <a name="genconfig"></a>
-##### Generate the neumatter.config file
+#### Generate the neumatter.config file
 Run: 
     
     npm run neucss config
 
 <a name="config"></a>
-##### Configuration Options
+#### Configuration Options
 To compile neumatter.css to a certain directory edit the exportPath in neumatter.config.
 
 Edit colors, system margin & padding, system border radius, and exclude css from being compiled.
 
 <a name="compile"></a>
-##### Compile neumatter.css
+#### Compile neumatter.css
 Run: 
     
     npm run neucss compile
