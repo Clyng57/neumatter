@@ -11,11 +11,11 @@
         5. [ Compile ](#compile) <br />
 
 <a name="download"></a>
-### Download
+## Download
 Download the /_lib directory
 
 <a name="packages"></a>
-### Packages
+## Packages
 1. [ @neumatter/neucss ](#neucss) <br /><br /><br />
 
 <a name="neucss"></a>
@@ -23,7 +23,6 @@ Download the /_lib directory
 
 <a name="install"></a>
 #### Install
-Run:
     
     npm i @neumatter/neucss 
 
@@ -35,7 +34,6 @@ Edit your package.json file and in the scripts write:
 
 <a name="genconfig"></a>
 #### Generate the neumatter.config file
-Run: 
     
     npm run neucss config
 
@@ -47,6 +45,5 @@ Edit colors, system margin & padding, system border radius, and exclude css from
 
 <a name="compile"></a>
 #### Compile neumatter.css
-Run: 
     
     npm run neucss compile
