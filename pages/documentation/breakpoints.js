@@ -10,8 +10,7 @@ export default function NeuBreakpoints() {
     </Head>
           <div className="l-system-wrapper u-mx/0">
             <h1 className="u-mb/system-33"><strong>(l-) Layout</strong></h1>
-            <h2 className="u-mb/system-33">Breakpoints</h2>
-            <p className="u-mb/system">Created as a light-weight framework to help standardize layouts. It is a moderate utility first approach adding more custom options by adding utility and attribute classes to components.</p>
+            <h2 className="u-mb/system">Breakpoints</h2>
           </div>
           <div className="l-row l-no-gutters u-flex-grow/1 u-mx/0 u-mb/system a-bg/convex-small a-rounded/100">
             <div className="l-column/9 u-px/system u-py/system-50">

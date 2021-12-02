@@ -33,7 +33,7 @@ const Theme = {
     dataBtnTheme.uncheck();
   },
   storage:
-  n$('stor').storage('theme')
+    n$('stor').storage('theme')
 };
 
 n$('window').eventOn('load', ()=> {

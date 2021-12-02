@@ -2,9 +2,7 @@
 const n$ = (selector)=> { 'use strict';
   class neuQuery {// neuQuery
 
-    #neumatter = { title: 'neumatter', version: '0.3' };
-
-	  constructor(selector) {// constructor
+    constructor(selector) {// constructor
       this.selector = selector;
       if (selector === 'document') {
         this.els = [document];
@@ -17,9 +15,12 @@ const n$ = (selector)=> { 'use strict';
       } else {
         this.els = (typeof selector === 'object') ? new Array(this.selector) : document.querySelectorAll(this.selector);
       }
-	  };// end constructor
+    };// end constructor
 
-    info = ()=> this.#neumatter;
+    info() {
+      let neumatter = { title: 'neumatter', version: '0.3' };
+      return neumatter;
+    }
 
     each(callback) {
       if (!callback || typeof callback !== 'function') { return; }
@@ -30,132 +31,123 @@ const n$ = (selector)=> { 'use strict';
     };
 
     eventOn(event, callback) {
-      this.each((els)=> els.addEventListener(event, callback));
+      this.each(els => els.addEventListener(event, callback));
       return this;
     }; 
 
     addClass(css) {
-      this.each((els)=> els.classList.add(css));
+      this.each(els => els.classList.add(css));
       return this;
     };
 
     removeClass(css) {
-      this.each((els)=> els.classList.remove(css));
+      this.each(els => els.classList.remove(css));
       return this;
     };
 
     swapClass(cssR, cssA) {
-      this.each((els)=> {
-        els.classList.remove(cssR);
-        els.classList.add(cssA);
-      });
+      this.each(els => els.classList.remove(cssR).classList.add(cssA));
       return this;
     };
 
     attribute(p, v) {
       if (!v) { let el = {str: ''};
-        this.each((els)=> el.str = els.getAttribute(p));
+        this.each(els => el.str = els.getAttribute(p));
         return el.str;
       } else {
-      this.each((els)=> els.setAttribute(p, v));
+      this.each(els => els.setAttribute(p, v));
       }
       return this;
     };
 
     storage(p, v) {
       if (!v) { let el = {str: ''};
-        this.each((els)=> el.str = els.getItem(p));
+        this.each(els => el.str = els.getItem(p));
         return el.str;
       } else {
-      this.each((els)=> els.setItem(p, v));
+      this.each(els => els.setItem(p, v));
       }
       return this;
     };
 
     id(v) {
       if (!v) { let el = {str: ''};
-        this.each((els)=> el.str = els.id);
+        this.each(els => el.str = els.id);
         return el.str;
       } else {
-        this.each((els)=> els.id = v);
+        this.each(els => els.id = v);
       }
       return this;
     };
 
     innerWidth() { let el = {str: ''};
-      this.each((els)=> {
+      this.each(els => {
         el.str = els.innerWidth;
       });
       return el.str;
     };
 
     searchVal() { let el = {str: ''};
-      this.each((els)=> {
+      this.each(els => {
         el.str = els.target.value.toLowerCase();
       });
       return el.str;
     };
 
     text() { let el = {str: ''};
-      this.each((els)=> el.str = els.textContent);
+      this.each(els => el.str = els.textContent);
       return el.str;
     };
 
     height() { let el = {str: ''};
-      this.each((els)=> el.str = els.clientHeight);
+      this.each(els => el.str = els.clientHeight);
       return el.str;
     };
 
     typeSize(v) { let s = {tV: ''};
-      this.each((els)=> {
-        if(!v) {
+      this.each(els => {
+        if (!v) 
           s.tV = els.style.fontSize;
-        } else {
+        else
           els.style.fontSize = v;
           s.tV = this;
-        }
       });
       return s.tV;
     };
 
     //___ true false and set
     hasClass(css) { let rtn = '';
-      this.each( (els)=> {
-        if (els.classList.contains(css)) {
+      this.each(els => {
+        if (els.classList.contains(css))
           rtn = true;
-        }
-        else {
+        else
           rtn = false;
-        }
       });
       return rtn;
     };
 
     contains(p) { let rtn = '';
-      this.each( (els)=> {
-        if (els.includes(p)) {
+      this.each(els => {
+        if (els.includes(p))
           rtn = true;
-        }
-        else {
+        else
           rtn = false;
-        }
       });
       return rtn;
     };
 
     check() {
-      this.each((els)=> els.checked = true);
+      this.each(els => els.checked = true);
       return this;
     };
 
     uncheck() {
-      this.each((els)=> els.checked = false);
+      this.each(els => els.checked = false);
       return this;
     };
-
-    //___ private functions
-    #activeLinks() {
-      this.each((els)=> {
+  
+    activeLinks() {
+      this.each(els => {
         let e = n$(els).attribute('href');
         let l = n$('window').location();
         if (l === e) {
@@ -165,8 +157,8 @@ const n$ = (selector)=> { 'use strict';
       return this;
     };
 
-    #activePaths() {
-      this.each((els)=> { 
+    activePaths() {
+      this.each(els => { 
         let e = n$(els).attribute('href');
         let l = n$('window').location();
         if (l.includes(e) && e !== '/') {
@@ -176,7 +168,7 @@ const n$ = (selector)=> { 'use strict';
       return this;
     };
 
-    #browser() {
+    browser() {
       let ua = navigator.userAgent;
       let webkitVersion = /version\/(\d+(\.\d+)?)/i;
       let result        = {name: '', version: '', screen: ''};
@@ -208,20 +200,14 @@ const n$ = (selector)=> { 'use strict';
       return result;
     };
 
-    #location() { let el = {any: ''};
-      this.each((els)=> {
+    location() { let el = {any: ''};
+      this.each(els => {
         let loc = els.location.href;
         let l = loc.substring(loc.indexOf('/', 9) + 1);
         el.any = '/' + l;
       });
       return el.any;
     };
-
-    //___ return private functions
-    activeLinks = ()=> this.#activeLinks();
-    activePaths = ()=> this.#activePaths();
-    browser = ()=> this.#browser();
-    location = ()=> this.#location();
 
   };// end neuQuery
   return new neuQuery(selector);
