@@ -1,4 +1,4 @@
-(./public/neumatter-logo-blackBG-01.svg)
+![plot](./public/neumatter-logo-blackBG-01.svg)
 
 ## Table of Contents
 1. [ Download ](#download) <br />
