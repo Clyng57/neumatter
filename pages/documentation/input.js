@@ -27,24 +27,24 @@ export default function DocumentationInput() {
 
           <NotificationCenter>
             <div className="c-notification a-bg-blur/success" data-notification="successDemo">
-              <p className="t-title">Title</p>
-              <p className="t-secondary">Secondary</p>
-              <p className="t-body">The quick brown fox jumps over the lazy dog.</p>
+              <p className="t-type/title">Title</p>
+              <p className="t-type/secondary">Secondary</p>
+              <p className="t-type/body">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div className="c-notification a-bg-blur/warning" data-notification="successDemo">
-              <p className="t-title">Title</p>
-              <p className="t-secondary">Secondary</p>
-              <p className="t-body">The quick brown fox jumps over the lazy dog.</p>
+              <p className="t-type/title">Title</p>
+              <p className="t-type/secondary">Secondary</p>
+              <p className="t-type/body">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div className="c-notification a-bg-blur/info" data-notification="successDemo">
-              <p className="t-title">Title</p>
-              <p className="t-secondary">Secondary</p>
-              <p className="t-body">The quick brown fox jumps over the lazy dog.</p>
+              <p className="t-type/title">Title</p>
+              <p className="t-type/secondary">Secondary</p>
+              <p className="t-type/body">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div className="c-notification a-bg-blur/1" data-notification="successDemo">
-              <p className="t-title">Title</p>
-              <p className="t-secondary">Secondary</p>
-              <p className="t-body">The quick brown fox jumps over the lazy dog.</p>
+              <p className="t-type/title">Title</p>
+              <p className="t-type/secondary">Secondary</p>
+              <p className="t-type/body">The quick brown fox jumps over the lazy dog.</p>
             </div>
           </NotificationCenter>
           

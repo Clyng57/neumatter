@@ -1,34 +1,18 @@
 @charset "UTF-8";
-/*! neumatter css */
+/*! NEUMATTER CSS */
 
-
-/*
-Credits:
-    Bootstrap and its contributors for class names and inspiration. Moreover, 
-    the containers, grid system and the flex utilities found in Halfmoon CSS 
-    are almost direct copies of the ones found in Bootstrap. Therefore, the 
-    following copyright notice is provided:
-    ---------------------------------------------------------------------------
-    Bootstrap (https://getbootstrap.com/)
-    Copyright 2011-2020 The Bootstrap Authors
-    Copyright 2011-2020 Twitter, Inc.
-    Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-    ---------------------------------------------------------------------------
+/* Credit:
+============================================================================
+  NEUMATTER
+    - neumatter.css/neucss | MIT License | github.com/Clyng57/neumatter
+----------------------------------------------------------------------------
 */
 
-/*
--------------------------------------------------------------------------------
-0.  Normalize CSS
-
-Notes:
-    ~ Normalize.css makes browsers render all elements more consistently and 
-    in line with modern standards. It precisely targets only the styles that 
-    need normalizing.
-    ~ normalize.css | MIT License | github.com/necolas/normalize.css
-    ~ This is a slighly customized version of normalize.css 8.0.1, 
-    specifically for dealing with Halfmoon CSS.
-    ~ Comments have been removed for the sake of compactness.
--------------------------------------------------------------------------------
+/* Credit:
+============================================================================
+  Normalize CSS
+    - normalize.css | MIT License | github.com/necolas/normalize.css
+----------------------------------------------------------------------------
 */
 
 /*
@@ -447,7 +431,9 @@ output {
 
 [hidden], template {
   display: none;
-}/*
+}
+
+/*
 ============================================================================
   SYSTEM BASE STYLES
 ----------------------------------------------------------------------------
@@ -464,10 +450,16 @@ html {
   box-sizing: border-box;
 }
 
+
+/*_______selection */
+
 ::selection {
   background-color: var(--primary);
   color: var(--white);
 }
+
+
+/*_______placeholder */
 
 ::placeholder {
   color: var(--text-placeholder);
@@ -492,10 +484,17 @@ body {
   -webkit-font-smoothing: var(--font-smoothing-webkit);
   -moz-osx-font-smoothing: var(--font-smoothing-moz);
   background-color: var(--bg-base);
-}/*
+}
+
+/*
 ============================================================================
   TYPOGRAPHY
 ----------------------------------------------------------------------------
+*/
+
+/* 
+  code
+----------------------------------------------
 */
 
 code,
@@ -506,129 +505,79 @@ samp {
   font-size: 0.875rem;
 }
 
-code {
-  color:#f2f2f2;
-}
+code { color:#f2f2f2; }
+a>code { color: inherit; }
 
-a>code {
-    color: inherit
-}
+.l-system-wrapper.code { background-color: var(--bg-one); } /* for bg color of code box */
 
-.l-system-wrapper.code {
-  background-color: var(--bg-one);
-}
+.t-tag       { color:#ffa4fc;  } /* for tags      */
+.t-attribute { color:#ffd9a1;  } /* for attribute */
+.t-property  { color: #aca9ff; } /* for props     */
+.t-class     { color:#ffac54;  } /* for classes   */
 
-.t-tag {
-  color:#ffa4fc;
-}
+/* 
+  t-type & <p>
+----------------------------------------------
+*/
 
-.t-attribute {
-  color:#ffd9a1;
-}
+p { font-size: 0.9375rem; line-height: 1.4; }
 
-.t-property {
-  color: #aca9ff;
-}
-
-.t-class {
-  color:#ffac54;
-}
-
-p {
-  font-size: 0.9375rem;
-  line-height: 1.4;
-}
-
-.t-title {
+.t-type\/title {
   font-size: 0.9375rem;
   line-height: 1.4;
   font-weight: 600;
 }
 
-.t-secondary {
+.t-type\/secondary {
   font-size: 0.75rem;
   color: var(--text-negativeone);
   line-height: 1.25;
 }
 
-.t-size\/1,h1 {
-  font-size: 1.8125rem;
-  line-height: 1.25;
-}
+/* 
+  t-size & <h[1-6]>
+----------------------------------------------
+*/
 
-.t-size\/2,h2 {
-  font-size: 1.625rem;
-  line-height: 1.275;
-}
+.t-size\/1,h1 { font-size: 1.8125rem; line-height: 1.25;  }
+.t-size\/2,h2 { font-size: 1.625rem; line-height: 1.275;  }
+.t-size\/3,h3 { font-size: 1.4375rem; line-height: 1.3;   }
+.t-size\/4,h4 { font-size: 1.325rem; line-height: 1.325;  }
+.t-size\/5,h5 { font-size: 1.25rem; line-height: 1.35;    }
+.t-size\/6,h6 { font-size: 1.0625rem; line-height: 1.375; }
 
-.t-size\/3,h3 {
-  font-size: 1.4375rem;
-  line-height: 1.3;
-}
-
-.t-size\/4,h4 {
-  font-size: 1.325rem;
-  line-height: 1.325;
-}
-
-.t-size\/5,h5 {
-  font-size: 1.25rem;
-  line-height: 1.35;
-}
-
-.t-size\/6,h6 {
-  font-size: 1.0625rem;
-  line-height: 1.375;
-}
+/* 
+  t-paragraph
+----------------------------------------------
+    - to add hyphens and to better wrapping
+*/
 
 .t-paragraph {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    -webkit-hyphens: auto;
-    -webkit-hyphenate-limit-before: 3;
-    -webkit-hyphenate-limit-after: 3;
-    -webkit-hyphenate-limit-chars: 6 3 3;
-    -webkit-hyphenate-limit-lines: 2;
-    -webkit-hyphenate-limit-last: always;   
-    -webkit-hyphenate-limit-zone: 8%;
-    -moz-hyphens: auto;
-    -moz-hyphenate-limit-chars: 6 3 3;
-    -moz-hyphenate-limit-lines: 2;  
-    -moz-hyphenate-limit-last: always;
-    -moz-hyphenate-limit-zone: 8%;
-    -ms-hyphens: auto;
-    -ms-hyphenate-limit-chars: 6 3 3;
-    -ms-hyphenate-limit-lines: 2;
-    -ms-hyphenate-limit-last: always;   
-    -ms-hyphenate-limit-zone: 8%;
-    hyphens: auto;
-    hyphenate-limit-chars: 6 3 3;
-    hyphenate-limit-lines: 2;
-    hyphenate-limit-last: always;   
-    hyphenate-limit-zone: 8%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;   
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;  
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;   
+  -ms-hyphenate-limit-zone: 8%;
+  hyphens: auto;
 }
 
-.list-unstyled {
-    padding-left: 0;
-    list-style: none;
-}
+.t-list-style\/none { padding-left: 0; list-style: none; }
 
-.list-inline {
-    padding-left: 0;
-    list-style: none;
-}
-
-.list-inline-item {
-    display: inline-block;
-}
-
-.list-inline-item:not(:last-child) {
-    margin-right: .5rem;
-}
-
-.blockquote {
-  font-size: 1.15rem;
-}
+.t-blockquote { font-size: 1.15rem; }
 
 .t-monospace    {  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  }
 
@@ -1001,7 +950,7 @@ overflow: auto;
 }
 
 /* 
-  Navbar
+  c-navbar
 ----------------------------------------------
 */
 
@@ -1167,8 +1116,10 @@ font-size: 0.875rem;
   }
 }
 
-
-/*_______Tabs */
+/* 
+  c-tabs
+----------------------------------------------
+*/
 
 input[type="radio"] + label:hover,
 input[type="checkbox"] + label:hover {
@@ -1195,7 +1146,11 @@ input[type="checkbox"] + label:hover {
   max-height: 400px;
 }
 
-
+/* 
+  c-webkit-scrollbars
+----------------------------------------------
+    - for customization
+*/
 
 .c-webkit-scrollbars *::-webkit-scrollbar {
   width: 18px;
@@ -1227,6 +1182,10 @@ input[type="checkbox"] + label:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* 
+  c-btn
+----------------------------------------------
+*/
 
 .c-btn {
   position: relative;
@@ -1239,7 +1198,6 @@ input[type="checkbox"] + label:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: var(--bg-base);
   padding: calc(var(--system-margin) / 4) calc(var(--system-margin) / 2);
   font-size: inherit;
   line-height: 1.4;
@@ -1271,9 +1229,7 @@ input[type="checkbox"] + label:hover {
               inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-concave);
 }
 
-.c-btn:hover::after  { border-radius: var(--system-border-d2); }
-
-.c-btn:hover::after { opacity: 1; }
+.c-btn:hover::after  { border-radius: var(--system-border-d2); opacity: 1; }
 
 @media (prefers-reduced-motion:reduce) {
   .c-btn {
@@ -1396,7 +1352,10 @@ fieldset:disabled a.c-btn {
   background-color: var(--disabled);
 }
 
-/* Icons */
+/* 
+  c-theme-btn
+----------------------------------------------
+*/
 
 .c-theme-btn {
   position: fixed;
@@ -1423,6 +1382,11 @@ fieldset:disabled a.c-btn {
   background-position: center;
   background-size: contain;
 }
+
+/* 
+  c-notification
+----------------------------------------------
+*/
 
 .c-notification\/center {
   z-index: 1030;
@@ -1463,18 +1427,18 @@ fieldset:disabled a.c-btn {
   margin: var(--system-margin) auto;
 }
 
-.c-notification .t-body {
-  font-size: 0.9rem;
-}
+.c-notification .t-type\/body { font-size: 0.9rem; }
 
-.c-notification .t-title,
-.c-notification .t-secondary {
-  display: inline-block;
-}
+.c-notification .t-type\/title,
+.c-notification .t-type\/secondary { display: inline-block; }
 
-.c-notification .t-secondary {
-  float: inline-end;
-}
+.c-notification .t-type\/secondary { float: inline-end; }
+
+/* 
+  c-badge
+----------------------------------------------
+    - add bg color by adding a-bg class
+*/
 
 .c-badge {
   display: inline-block;
@@ -1482,7 +1446,7 @@ fieldset:disabled a.c-btn {
   font-size: 0.75em;
   font-weight: 700;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

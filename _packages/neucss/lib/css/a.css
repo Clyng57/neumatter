@@ -6,14 +6,10 @@
 ----------------------------------------------------------------------------
 */
 
-/*_______A-rounded*/
+/*_______A-rounded */
 
-.a-rounded\/100 {
-  border-radius: var(--system-border);
-}
-.a-rounded\/50 {
-  border-radius: var(--system-border-d2);
-}
+.a-rounded\/100 { border-radius: var(--system-border); }
+.a-rounded\/50 { border-radius: var(--system-border-d2); }
 .a-rounded\/top {
   border-top-left-radius: var(--system-border);
   border-top-right-radius: var(--system-border);
@@ -32,7 +28,7 @@
 }
 
 
-/*_______A-colors*/
+/*_______A-colors */
 
 .a-text-color\/n1   { color: var(--text-negativeone) ; }
 .a-text-color\/base { color: var(--text) ;             }
@@ -62,40 +58,40 @@
 .a-bg-color\/warning-50   { background-color: var(--warning-50) ;   }
 .a-bg-color\/danger-50    { background-color: var(--danger-50) ;    }
 
-.a-bg-color\/primary      {  background-color: var(--primary) ;         }
-.a-bg-color\/secondary    {  background-color: var(--secondary) ;       }
-.a-bg-color\/info         {  background-color: var(--info) ;            }
-.a-bg-color\/success      {  background-color: var(--success) ;         }
-.a-bg-color\/warning      {  background-color: var(--warning) ;         }
-.a-bg-color\/danger       {  background-color: var(--danger) ;          }
+.a-bg-color\/primary      { background-color: var(--primary); }
+.a-bg-color\/secondary    { background-color: var(--secondary); }
+.a-bg-color\/info         { background-color: var(--info); }
+.a-bg-color\/success      { background-color: var(--success); }
+.a-bg-color\/warning      { background-color: var(--warning); }
+.a-bg-color\/danger       { background-color: var(--danger); }
 
-.a-bg-color\/n1\:hover:hover      {  background-color: var(--bg-negative-one) ;  }
-.a-bg-color\/base\:hover:hover         {  background-color: var(--bg-base) ;         }
+.a-bg-color\/n1\:hover:hover   { background-color: var(--bg-negative-one); }
+.a-bg-color\/base\:hover:hover { background-color: var(--bg-base); }
 
-.a-bg-color\/primary\:hover:hover      {  background-color: var(--primary-20) ;         }
-.a-bg-color\/secondary\:hover:hover    {  background-color: var(--secondary-20) ;       }
-.a-bg-color\/info\:hover:hover         {  background-color: var(--info-20) ;            }
-.a-bg-color\/success\:hover:hover      {  background-color: var(--success-20) ;         }
-.a-bg-color\/warning\:hover:hover      {  background-color: var(--warning-20) ;         }
-.a-bg-color\/danger\:hover:hover       {  background-color: var(--danger-20) ;          }
+.a-bg-color\/primary\:hover:hover      { background-color: var(--primary-20); }
+.a-bg-color\/secondary\:hover:hover    { background-color: var(--secondary-20); }
+.a-bg-color\/info\:hover:hover         { background-color: var(--info-20); }
+.a-bg-color\/success\:hover:hover      { background-color: var(--success-20); }
+.a-bg-color\/warning\:hover:hover      { background-color: var(--warning-20); }
+.a-bg-color\/danger\:hover:hover       { background-color: var(--danger-20); }
 
 .a-bg-color\/n1\:active:active,
-.a-bg-color\/n1\:active.active       {  background-color: var(--bg-negative-one) ;  }
+.a-bg-color\/n1\:active.active   { background-color: var(--bg-negative-one); }
 .a-bg-color\/base\:active:active, 
-.a-bg-color\/base\:active.active          {  background-color: var(--bg-base) ;         }
+.a-bg-color\/base\:active.active { background-color: var(--bg-base); }
 
 .a-bg-color\/primary\:active:active,
-.a-bg-color\/primary\:active.active       {  background-color: var(--primary-20) ;         }
+.a-bg-color\/primary\:active.active    { background-color: var(--primary-20); }
 .a-bg-color\/secondary\:active:active,
-.a-bg-color\/secondary\:active.active     {  background-color: var(--secondary-20) ;       }
+.a-bg-color\/secondary\:active.active  { background-color: var(--secondary-20); }
 .a-bg-color\/info\:active:active, 
-.a-bg-color\/info\:active.active          {  background-color: var(--info-20) ;            }
+.a-bg-color\/info\:active.active       { background-color: var(--info-20); }
 .a-bg-color\/success\:active:active,
-.a-bg-color\/success\:active.active       {  background-color: var(--success-20) ;         }
+.a-bg-color\/success\:active.active    { background-color: var(--success-20); }
 .a-bg-color\/warning\:active:active,
-.a-bg-color\/warning\:active.active       {  background-color: var(--warning-20) ;         }
+.a-bg-color\/warning\:active.active    { background-color: var(--warning-20); }
 .a-bg-color\/danger\:active:active,
-.a-bg-color\/danger\:active.active        {  background-color: var(--danger-20) ;          }
+.a-bg-color\/danger\:active.active     { background-color: var(--danger-20); }
 
 .a-bg-gradient\/base-one    {  background: linear-gradient(var(--bg-base), var(--bg-one));  }
 

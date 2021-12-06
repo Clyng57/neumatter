@@ -33,7 +33,7 @@ export default function Layout({ children }) {
             <div className="l-wrapper/viewport:md">
               <div className="u-offset/4"></div>
 
-              <p className="u-m/system-50 u-p/system-50 a-rounded/50 a-bg-color/1 a-glow/primary t-secondary a-text-color/base">
+              <p className="u-m/system-50 u-p/system-50 a-rounded/50 a-bg-color/1 a-glow/primary t-type/secondary a-text-color/base">
                 <b>npm i @neumatter/neucss</b>
               </p>
 

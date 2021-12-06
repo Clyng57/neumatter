@@ -21,7 +21,7 @@
 }
 
 /* 
-  Navbar
+  c-navbar
 ----------------------------------------------
 */
 
@@ -187,8 +187,10 @@ font-size: 0.875rem;
   }
 }
 
-
-/*_______Tabs */
+/* 
+  c-tabs
+----------------------------------------------
+*/
 
 input[type="radio"] + label:hover,
 input[type="checkbox"] + label:hover {
@@ -215,7 +217,11 @@ input[type="checkbox"] + label:hover {
   max-height: 400px;
 }
 
-
+/* 
+  c-webkit-scrollbars
+----------------------------------------------
+    - for customization
+*/
 
 .c-webkit-scrollbars *::-webkit-scrollbar {
   width: 18px;
@@ -247,6 +253,10 @@ input[type="checkbox"] + label:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* 
+  c-btn
+----------------------------------------------
+*/
 
 .c-btn {
   position: relative;
@@ -259,7 +269,6 @@ input[type="checkbox"] + label:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: var(--bg-base);
   padding: calc(var(--system-margin) / 4) calc(var(--system-margin) / 2);
   font-size: inherit;
   line-height: 1.4;
@@ -291,9 +300,7 @@ input[type="checkbox"] + label:hover {
               inset -0.1875em -0.1875em 0.3125em 0 var(--Highlight-concave);
 }
 
-.c-btn:hover::after  { border-radius: var(--system-border-d2); }
-
-.c-btn:hover::after { opacity: 1; }
+.c-btn:hover::after  { border-radius: var(--system-border-d2); opacity: 1; }
 
 @media (prefers-reduced-motion:reduce) {
   .c-btn {
@@ -416,7 +423,10 @@ fieldset:disabled a.c-btn {
   background-color: var(--disabled);
 }
 
-/* Icons */
+/* 
+  c-theme-btn
+----------------------------------------------
+*/
 
 .c-theme-btn {
   position: fixed;
@@ -443,6 +453,11 @@ fieldset:disabled a.c-btn {
   background-position: center;
   background-size: contain;
 }
+
+/* 
+  c-notification
+----------------------------------------------
+*/
 
 .c-notification\/center {
   z-index: 1030;
@@ -483,18 +498,18 @@ fieldset:disabled a.c-btn {
   margin: var(--system-margin) auto;
 }
 
-.c-notification .t-body {
-  font-size: 0.9rem;
-}
+.c-notification .t-type\/body { font-size: 0.9rem; }
 
-.c-notification .t-title,
-.c-notification .t-secondary {
-  display: inline-block;
-}
+.c-notification .t-type\/title,
+.c-notification .t-type\/secondary { display: inline-block; }
 
-.c-notification .t-secondary {
-  float: inline-end;
-}
+.c-notification .t-type\/secondary { float: inline-end; }
+
+/* 
+  c-badge
+----------------------------------------------
+    - add bg color by adding a-bg class
+*/
 
 .c-badge {
   display: inline-block;
@@ -502,7 +517,7 @@ fieldset:disabled a.c-btn {
   font-size: 0.75em;
   font-weight: 700;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

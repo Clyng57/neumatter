@@ -1,3 +1,5 @@
+
+
 /*
 ============================================================================
   SYSTEM BASE STYLES
@@ -15,10 +17,16 @@ html {
   box-sizing: border-box;
 }
 
+
+/*_______selection */
+
 ::selection {
   background-color: var(--primary);
   color: var(--white);
 }
+
+
+/*_______placeholder */
 
 ::placeholder {
   color: var(--text-placeholder);
