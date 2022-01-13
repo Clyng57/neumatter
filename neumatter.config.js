@@ -1,5 +1,6 @@
 module.exports.config = {
     exportPath: "./public/css/",
+    variablesBase: 'base',
     colors: {
       primary: '',
       secondary: '',

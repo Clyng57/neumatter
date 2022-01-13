@@ -1,13 +1,20 @@
 {
-  "name": "@neumatter/neucss",
-  "version": "1.2.8",
-  "description": "css generater",
+  "name": "@neumatter/neumattercss",
+  "version": "0.0.5",
+  "description": "compile css into a neumorphism framework",
   "main": "index.js",
-  "keywords": [],
-  "author": "cal young",
+  "keywords": [
+    "css",
+    "css compiler",
+    "css generater",
+    "neumorphism",
+    "css framework"
+  ],
+  "author": "Cal Young",
   "license": "MIT",
   "bin": {
-    "neucss": "index.js"
+    "neucss": "index.js",
+    "neumattercss": "index.js"
   },
   "engines": {
     "node": ">=14.13.0"
