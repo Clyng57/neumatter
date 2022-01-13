@@ -1,5 +1,7 @@
 
-const n$ = (selector)=> { 'use strict';
+'use strict';
+
+const n$ = (selector)=> {
   class neuQuery {// neuQuery
 
     constructor(selector) {// constructor
@@ -150,9 +152,7 @@ const n$ = (selector)=> { 'use strict';
       this.each(els => {
         let e = n$(els).attribute('href');
         let l = n$('window').location();
-        if (l === e) {
-          n$(els).addClass('active');
-        }
+        if (l === e) n$(els).addClass('active');
       });
       return this;
     };
@@ -161,7 +161,7 @@ const n$ = (selector)=> { 'use strict';
       this.each(els => { 
         let e = n$(els).attribute('href');
         let l = n$('window').location();
-        if (l.includes(e) && e !== '/') {
+        if (l.includes(e + '/') && e !== '/') {
           n$(els).addClass('active');
         }
       });

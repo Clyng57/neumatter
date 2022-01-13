@@ -18,45 +18,37 @@ export default function TabBar() {
           <div className="c-tab a-rounded/bottom">
             <TabBarLink pageLink="/documentation/breakpoints">Breakpoints</TabBarLink>
             <TabBarLink pageLink="/documentation/columns">Columns</TabBarLink>
-            <TabBarLink pageLink="/documentation/spacing">Spacing</TabBarLink>
             <TabBarLink pageLink="/documentation/wrappers">Wrappers</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-3">
           (c-) Components
         </TabBarTitle>
           <div className="c-tab">
-            <TabBarLink pageLink="#">Badge</TabBarLink>
-            <TabBarLink pageLink="#">Carousel</TabBarLink>
-            <TabBarLink pageLink="#">Footer</TabBarLink>
-            <TabBarLink pageLink="#">Header</TabBarLink>
-            <TabBarLink pageLink="#">Navbar</TabBarLink>
-            <TabBarLink pageLink="#">Navbar Tabs</TabBarLink>
-            <TabBarLink pageLink="#">Notifications</TabBarLink>
+            <TabBarLink pageLink="/documentation/badge">Badge</TabBarLink>
+            <TabBarLink pageLink="/documentation/buttons">Buttons</TabBarLink>
+            <TabBarLink pageLink="/documentation/navbar">Navbar</TabBarLink>
+            <TabBarLink pageLink="/documentation/navbartabs">Navbar Tabs</TabBarLink>
+            <TabBarLink pageLink="/documentation/notifications">Notifications</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-4">
           (t-) Typography
         </TabBarTitle>
           <div className="c-tab">
-            <TabBarLink pageLink="/documentation/typography">Introduction</TabBarLink>
+            <TabBarLink pageLink="/documentation/fontsize">Font Size</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-5">
           (a-) Attributes
         </TabBarTitle>
           <div className="c-tab">
-            <TabBarLink pageLink="#">Text Color</TabBarLink>
-            <TabBarLink pageLink="#">Background Color</TabBarLink>
+            <TabBarLink pageLink="/documentation/text-color">Text Color</TabBarLink>
+            <TabBarLink pageLink="/documentation/background-color">Background Color</TabBarLink>
             <TabBarLink pageLink="/documentation/concave-convex">Concave & Convex</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-6">
           (u-) Utilities
         </TabBarTitle>
           <div className="c-tab">
-            <TabBarLink pageLink="#">Max & Min</TabBarLink>
-            <TabBarLink pageLink="#">Margins & Padding</TabBarLink>
-            <TabBarLink pageLink="#">Object Fit</TabBarLink>
-            <TabBarLink pageLink="#">Overflow</TabBarLink>
-            <TabBarLink pageLink="#">Position</TabBarLink>
-            <TabBarLink pageLink="#">Scroll Snap</TabBarLink>
+            <TabBarLink pageLink="/documentation/display">Display</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-7">
           (f-) Forms

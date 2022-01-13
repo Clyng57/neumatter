@@ -16,15 +16,15 @@ Download the /_lib directory
 
 <a name="packages"></a>
 # Packages
-1. [ @neumatter/neucss ](#neucss) <br /><br /><br />
+1. [ @neumatter/neumattercss ](#neucss) <br /><br /><br />
 
 <a name="neucss"></a>
-## @neumatter/neucss
+## @neumatter/neumattercss
 
 <a name="install"></a>
 ### Install
     
-    npm i @neumatter/neucss 
+    npm i @neumatter/neumattercss 
 
 <a name="gettingstarted"></a>
 ### Getting Started

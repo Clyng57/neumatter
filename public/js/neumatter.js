@@ -73,7 +73,7 @@ dataBtnTheme.eventOn('click', ()=> {
   }
 });
 
-navTabs.each((els)=> {
+navTabs.each(els=> {
   let el = n$(els);
   let e = el.id();
   const checkedNav = n$('stor').storage('checkedBox');

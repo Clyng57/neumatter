@@ -60,7 +60,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/6"</span>
+              <span className="t-class">{'"'}t-size/6{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
@@ -69,7 +69,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/5"</span>
+              <span className="t-class">{'"'}t-size/5{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
@@ -78,7 +78,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/4"</span>
+              <span className="t-class">{'"'}t-size/4{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
@@ -87,7 +87,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/3"</span>
+              <span className="t-class">{'"'}t-size/3{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
@@ -96,7 +96,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/2"</span>
+              <span className="t-class">{'"'}t-size/2{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
@@ -105,7 +105,7 @@ export default function DocumentationInput() {
             <code>
               <span className="t-tag">&lt;p</span>
               <span className="t-attribute">&nbsp;class=</span>
-              <span className="t-class">"t-size/1"</span>
+              <span className="t-class">{'"'}t-size/1{'"'}</span>
               <span className="t-tag">&gt;</span>
               The quick brown fox jumps over the lazy dog
               <span className="t-tag">&lt;/p&gt;</span>
