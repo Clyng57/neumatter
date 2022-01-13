@@ -10,7 +10,7 @@ export default function TabBar() {
           Overview
         </TabBarTitle>
           <div className="c-tab">
-            <TabBarLink pageLink="/documentation">Introduction</TabBarLink>
+            <TabBarLink pageLink="#">Introduction</TabBarLink>
           </div>
         <TabBarTitle dataNav="tab-2">
           (l-) Layout
