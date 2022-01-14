@@ -6,8 +6,8 @@ export default function NavBar() {
 	  <div data-theme="dark" className="c-navbar-wrapper">
       <div id="navbarNM" className="c-menu u-flex-row">
         <NavLink pageLink="/" navIcon="bi bi-house-door-fill nav-icon">neumatter</NavLink>
-        <NavLink pageLink="/documentation" navIcon="bi bi-grid-1x2-fill nav-icon">Documentation</NavLink>
-        <NavLink pageLink="/components" navIcon="bi bi-grid-1x2-fill nav-icon">Components</NavLink>
+        <NavLink pageLink="/documentation/breakpoints" navIcon="bi bi-file-earmark-code-fill">Documentation</NavLink>
+        {/*<NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">Components</NavLink> */}
       </div>
 	  </div>
   </nav>
