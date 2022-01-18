@@ -31,10 +31,10 @@ export default function Introduction() {
   </div>
   <CodeWriter>
     <code className="u-display/block">
-      <span className="t-property">"scripts"</span>: {'{'}
+      <span className="t-property">{'"'}scripts{'"'}</span>: {'{'}
     </code>
     <code className="u-display/block">&nbsp;&nbsp;
-      <span className="t-property">"neucss"</span>: <span className="t-class">"./node_modules/.bin/neucss"</span>
+      <span className="t-property">{'"'}neucss{'"'}</span>: <span className="t-class">{'"'}./node_modules/.bin/neucss{'"'}</span>
     </code>
     <code className="u-display/block">
       {'},'}
