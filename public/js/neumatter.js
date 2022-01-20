@@ -37,20 +37,12 @@ const Theme = {
 };
 
 n$('window').eventOn('load', ()=> {
-  if (Theme.storage === 'dark') {
+  if (Theme.storage === 'dark')
     Theme.dark();
-  } else {
-    if (Theme.storage === 'light') {
-      Theme.light();
-    }
-  }
-  if (Theme.storage === null) {
-    if (prefersDarkMode.matches) {
-      Theme.dark();
-    } else {
-      Theme.light();
-    }
-  }
+  else if (Theme.storage === 'light')
+    Theme.light();
+  if (Theme.storage === null)
+    (prefersDarkMode.matches ? Theme.dark : Theme.light)();
 });
 
 dataBtnLight.eventOn('click', ()=> {
@@ -73,21 +65,19 @@ dataBtnTheme.eventOn('click', ()=> {
   }
 });
 
-navTabs.each(els=> {
-  let el = n$(els);
-  let e = el.id();
-  const checkedNav = n$('stor').storage('checkedBox');
-  if (checkedNav === e) {
-    el.check();
-  }
-  el.eventOn('click', ()=> {
-    const checkedNavTwo = n$('stor').storage('checkedBox');
-    if (e === checkedNavTwo) {
-      el.uncheck();
+navTabs.each(navTab => {
+  let navTabId = n$(navTab).id();
+  let checkedNav = n$('stor').storage('checkedBox');
+  if (checkedNav === navTabId)
+    n$(navTab).check();
+  n$(navTab).eventOn('click', ()=> {
+    let checkedNavTwo = n$('stor').storage('checkedBox');
+    if (navTabId === checkedNavTwo) {
+      n$(navTab).uncheck();
       n$('stor').storage('checkedBox', 'nulled');
     } else {
-      el.check();
-      n$('stor').storage('checkedBox', e);
+      n$(navTab).check();
+      n$('stor').storage('checkedBox', navTabId);
     }
-  });
+  })
 });
