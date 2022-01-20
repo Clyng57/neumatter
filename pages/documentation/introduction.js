@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import CodeWriter from '../../components/CodeWriter'
 import Link from 'next/link'
-import NavLink from '../../ui/NavLink'
 
 export default function Introduction() {
   return (
