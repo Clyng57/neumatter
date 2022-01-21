@@ -58,7 +58,7 @@ export default function NeuBreakpoints() {
           </div>
           
           <CodeWriter>
-            <code className="u-display/none:md">
+            <code>
               <span className="t-tag">@media&nbsp;</span>
               <span>(min-width: <span className="t-attribute">620</span><span className="t-property">px</span>) &#123;</span>
             </code>

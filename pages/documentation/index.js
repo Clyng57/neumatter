@@ -2,7 +2,7 @@ import Head from 'next/head'
 import CodeWriter from '../../components/CodeWriter'
 import Link from 'next/link'
 
-export default function Introduction() {
+export default function Documentation() {
   return (
     <>
     <Head>
