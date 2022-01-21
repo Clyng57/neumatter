@@ -15,7 +15,7 @@ export default function Neumatter() {
       <h1 className="u-mb/system">
         A light-weight css framework to standardize layouts and spacing. <br/>A moderate utility first approach.
       </h1>
-      <Link href="/documentation/breakpoints">
+      <Link href="/documentation">
         <a className="c-btn c-btn/primary"><i className="bi bi-arrow-up-right-square"></i> Get Started</a>
       </Link>
       <Link href="/_neu_downloads.zip" download="_neu_downloads.zip">
