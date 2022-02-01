@@ -49,7 +49,7 @@ export default function Layout({ children }) {
       <Script src="/js/n.js" strategy="beforeInteractive" />
       <Script src="/js/neumatter.js" strategy="beforeInteractive" />
       <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-7DNX600PGK" />
-      <Script strategy="lazyOnload">
+      <Script id="googletags" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
