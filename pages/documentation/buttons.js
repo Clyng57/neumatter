@@ -18,7 +18,7 @@ export default function Buttons() {
       <a className="c-btn u-mb/system u-mx/system-50">c-btn</a>
     </Link>
     <Link href="#">
-      <a className="c-btn c-btn/reverse u-mb/system u-mx/system-50">c-btn/primary</a>
+      <a className="c-btn c-btn/reverse u-mb/system u-mx/system-50">c-btn/reverse</a>
     </Link>
     <Link href="#">
       <a className="c-btn c-btn/primary u-mb/system u-mx/system-50">c-btn/primary</a>

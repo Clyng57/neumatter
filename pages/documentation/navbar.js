@@ -26,15 +26,25 @@ export default function DocumentationNavbar() {
 	  </div>
   </nav>
 
-  <nav data-nav="top" data-offset="navbar" className="c-navbar u-mb/system" role="navigation" aria-label="main navigation">
-	  <div className="c-navbar-wrapper">
-      <div className="c-menu u-flex-row">
-        <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
-        <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
-        <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
-      </div>
-	  </div>
-  </nav>
+  <div id="navbarNM" className="c-tabs">
+  <input type="checkbox" id="nav-exampleToggler" defaultChecked/>
+    <label className="u-p/system" htmlFor="nav-exampleToggler">
+      <a className="a-rounded/50 a-bg/concave:hover a-bg-blur/base u-p/system-50">
+        <b>| | |</b>
+      </a>
+    </label>
+    <div className="c-tab">
+      <nav data-nav="top" data-offset="navbar" className="c-navbar u-mb/system" role="navigation" aria-label="main navigation">
+	      <div className="c-navbar-wrapper">
+          <div className="c-menu u-flex-row c-tabs">
+            <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
+            <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
+            <NavLink pageLink="#" navIcon="bi bi-grid-1x2-fill nav-icon">NavLink</NavLink>
+          </div>
+	      </div>
+      </nav>
+    </div>
+  </div>
 
     <CodeWriter>
       <code className="u-display/block">

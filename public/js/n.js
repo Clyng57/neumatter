@@ -1,7 +1,7 @@
 
 'use strict';
 
-const n$ = (selector)=> {
+function n$(selector) {
   class neuQuery {// neuQuery
 
     constructor(selector) {// constructor

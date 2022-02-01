@@ -19,7 +19,7 @@ export default function Neumatter() {
         <a className="c-btn c-btn/primary"><i className="bi bi-arrow-up-right-square"></i> Get Started</a>
       </Link>
       <Link href="/_neu_downloads.zip" download="_neu_downloads.zip">
-        <a className="c-btn c-btn/info u-ml/system"><i className="bi bi-file-earmark-arrow-down"></i> Download</a>
+        <a id="downloadBtn" className="c-btn c-btn/info u-ml/system"><i className="bi bi-file-earmark-arrow-down"></i> Download</a>
       </Link>
     </div>
     <CodeWriter>
