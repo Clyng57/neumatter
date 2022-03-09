@@ -18,7 +18,7 @@ export default function Neumatter() {
       <Link href="/documentation">
         <a className="c-btn c-btn/primary"><i className="bi bi-arrow-up-right-square"></i> Get Started</a>
       </Link>
-      <Link href={{ pathname: '/api/download', query: { click: true }, }} prefetch={false} /* download="_neu_downloads.zip" */>
+      <Link href={{ pathname: '/api/download', query: { click: true }, }} prefetch={false} >
         <a id="downloadBtn" className="c-btn c-btn/info u-ml/system">
           <i className="bi bi-file-earmark-arrow-down"></i> Download
         </a>

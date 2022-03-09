@@ -6,33 +6,18 @@ const getCount = (filePath)=> {
   return new Promise((resolve, reject)=> {
     let dCount = 0;
     fs.readFile(filePath, (err, data)=> {
+      if (err) {
+        logger.error(err)
+      }
       let dataStr = data.toString();
-      let dataStrings = dataStr.matchAll(/{ [\d]+ };/g);
-      console.log(dataStrings)
-      console.log(dataStrings.length)
+      let dataStrings = dataStr.match(/\{ 1 \};/g);
       let stringCount = dataStrings.length;
-      if (stringCount === 0)
-        resolve(dCount)
-      let stringsProcessed = 0;
-      dataStrings.forEach(dataString => {
-        let dataNumber = parseInt(dataString)
-        if (dataNumber === NaN) {
-          logger.error('dataNumber is NaN');
-          stringsProcessed += 1;
-          if (stringCount === stringsProcessed)
-            resolve(dCount)
-        } else {
-          dCount += dataNumber;
-          stringsProcessed += 1;
-          if (stringCount === stringsProcessed)
-            resolve(dCount)
-        }
-      })
+      resolve(stringCount)
     })
   })
 }
 
-export default (req, res)=> {
+export default function handler(req, res) {
   getCount(path.join(process.cwd(), 'logs/downloadCount.log'))
     .then(downloadCount => {
       res.status(200).json({ downloads: downloadCount })
