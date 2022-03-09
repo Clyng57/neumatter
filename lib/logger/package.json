@@ -1,0 +1,26 @@
+{
+  "name": "@neumatter/logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "A light-weight logger.",
+  "author": "Cal Young",
+  "license": "MIT",
+  "keywords": [
+    "log",
+    "logger",
+    "console",
+    "logs",
+    "javascript",
+    "js",
+    "nodejs",
+    "node"
+  ],
+  "files": [
+    "index.js",
+    "types/index.d.ts"
+  ],
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "chroma-palette": "^1.2.2"
+  }
+}
