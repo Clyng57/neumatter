@@ -1,5 +1,6 @@
 import path from 'path'
 import f from 'fs/promises'
+import fs from 'fs'
 import { convert } from 'convert-svg-to-png'
 import stream from 'stream'
 
@@ -13,17 +14,8 @@ export default async function sendFile (req, res) {
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
-    res.setHeader('Content-Disposition',`attachment; filename=${fileName}`)
-    const str = stream.Readable.from(fileData)
-    str.pipe(res)
-        /*
-      f.writeFile(filePath, data, (err) => {
-        if (err) throw err
-        convert(filePath)
-          .then(outputConverted => {
-            const fileStream = f.createReadStream(outputConverted)
-            fileStream.pipe(res)
-          })
-      })
-      */
+    fs.writeFile(filePath.replace('.svg', '.png'), fileData, (err) => {
+      if (err) throw err
+      return res.status(302).redirect('/tpu-logo.png')
+    })
 }
