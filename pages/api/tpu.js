@@ -14,6 +14,6 @@ export default async function sendFile (req, res) {
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
-    res.setHeader('Content-Disposition',`filename=${fileName}`)
+    res.setHeader('Content-Disposition',`attachment; filename=${fileName}`)
     res.send(fileData)
 }
