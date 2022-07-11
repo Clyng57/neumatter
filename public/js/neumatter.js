@@ -93,18 +93,18 @@ if (colorSelector) {
     console.log(colorSelector.value)
     tpuPathOne.setAttribute('fill', colorSelector.value)
     tpuPathTwo.setAttribute('fill', colorSelector.value)
-    const tpuHref = tpuLink.getAttribute('href').replace(/^[^?]*/, '')
+    const tpuHref = tpuLink.getAttribute('nuHref').replace(/^[^?]*/, '')
     const searchParams = new URLSearchParams(tpuHref ? tpuHref : undefined)
     searchParams.delete('color')
     searchParams.append('color', colorSelector.value.replace('#', ''))
-    tpuLink.setAttribute('href', `/api/tpu?${searchParams.toString()}`)
+    tpuLink.setAttribute('nuHref', `/api/tpu?${searchParams.toString()}`)
     console.log(searchParams.toString())
   })
 
   tpuLink.addEventListener('click', (e) => {
     e.preventDefault()
       async function downloadImage() {
-      const image = await fetch(tpuLink.getAttribute('href'))
+      const image = await fetch(tpuLink.getAttribute('nuHref'))
       const imageBlog = await image.blob()
       const imageURL = URL.createObjectURL(imageBlog)
   

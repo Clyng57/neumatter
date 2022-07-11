@@ -11,7 +11,7 @@ export default (req, res)=> {
     const color = `fill="#${searchParams.get('color')}"`
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
-    return convert(data, { width: 1273, height: 640 })
+    convert(data, { width: 1273, height: 640 })
       .then(fileData => {
         res.status(200)
         // res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
