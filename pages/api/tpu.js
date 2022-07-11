@@ -13,6 +13,7 @@ export default (req, res)=> {
     const data = fileString
     convert(data, { width: 1273, height: 640 })
       .then(fileData => {
+        res.status(200)
         res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
         res.end(fileData)
       })
