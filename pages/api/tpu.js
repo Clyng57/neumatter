@@ -16,8 +16,8 @@ export default function (req, res) {
         res.status(200)
         const stats = f.statSync(filePath)
         res.setHeader('Content-Length', stats.size)
-        // res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
-        return res.end(fileData)
+        res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
+        return res.send(fileData)
       })
       /*
     f.writeFile(filePath, data, (err) => {
