@@ -2,20 +2,22 @@ import path from 'path'
 import f from 'fs'
 import { convert } from 'convert-svg-to-png'
 
-export default (req, res)=> {
+export default function (req, res) {
   console.log(req.url)
   const filePath = path.join(process.cwd(), 'public/tpu-logo.svg');     
   const fileName = filePath.substring(filePath.lastIndexOf("/") + 1).replace('.svg', '.png');
-  f.readFile(filePath, (err, fileBuffer) => {
+  return f.readFile(filePath, (err, fileBuffer) => {
     const searchParams = new URLSearchParams(req.url.replace(/^[^?]*/, ''))
     const color = `fill="#${searchParams.get('color')}"`
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
-    convert(data, { width: 1273, height: 640 })
+    return convert(data, { width: 1273, height: 640 })
       .then(fileData => {
         res.status(200)
+        const stats = f.statSync(filePath)
+        res.setHeader('Content-Length', stats.size)
         // res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
-        res.end(fileData)
+        return res.end(fileData)
       })
       /*
     f.writeFile(filePath, data, (err) => {
