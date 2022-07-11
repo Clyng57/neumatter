@@ -1,7 +1,18 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import toImg from 'react-svg-to-image'
 
 export default function DocumentationInput() {
+  function downloadSVG () {
+    toImg('svg', 'tpu-logo', {
+      scale: 3,
+      format: 'png',
+      download: true
+    }).catch(err => {
+      console.error(err)
+      //do something with the data
+    })
+  }
   return (
     <>
       <Head>
@@ -16,7 +27,7 @@ export default function DocumentationInput() {
           
           
 
-<form className="l-row u-mx/system-neg2" action="/api/tpu" method="post">
+<form className="l-row u-mx/system-neg2">
   <div className="l-column/6">
     <input type="color" id="color" name="color"/>
     <label htmlFor="color">Choose Color</label>
@@ -34,7 +45,7 @@ export default function DocumentationInput() {
 		c3.2-4.3,4.9-10.6,4.9-18.9l0.1-85.7H293l0.1,85.7C293.2,104.2,292.2,110.7,290.1,116.9z"/>
     </g>
   </svg>
-    <button id="tpuLink" type="submit" className="c-btn c-btn-primary">Download</button>
+    <button id="tpuLink" onClick={(e) => { e.preventDefault() ; return downloadSVG()} } className="c-btn c-btn-primary">Download</button>
   </div>
 </form>
 
