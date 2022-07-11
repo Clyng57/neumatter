@@ -10,5 +10,5 @@ export default (req, res)=> {
   fileStream.pipe(res);
   fileStream.on('end', ()=> {
     logger.info(1);
-  });
+  })
 };

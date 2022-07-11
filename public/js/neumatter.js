@@ -81,3 +81,23 @@ navTabs.each(navTab => {
     }
   })
 });
+
+const colorSelector = document.querySelector('#color')
+const tpuPathOne = document.querySelector('#tpuPathOne')
+const tpuPathTwo = document.querySelector('#tpuPathTwo')
+const tpuLink = document.querySelector('#tpuLink')
+
+if (colorSelector) {
+  console.log(colorSelector.value)
+  colorSelector.addEventListener('change', ()=> {
+    console.log(colorSelector.value)
+    tpuPathOne.setAttribute('fill', colorSelector.value)
+    tpuPathTwo.setAttribute('fill', colorSelector.value)
+    const tpuHref = tpuLink.getAttribute('href').replace(/^[^?]*/, '')
+    const searchParams = new URLSearchParams(tpuHref ? tpuHref : undefined)
+    searchParams.delete('color')
+    searchParams.append('color', colorSelector.value.replace('#', ''))
+    tpuLink.setAttribute('href', `/api/tpu?${searchParams.toString()}`)
+    console.log(searchParams.toString())
+  })
+}
