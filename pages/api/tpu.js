@@ -13,5 +13,5 @@ export default async function sendFile (req, res) {
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
     // res.setHeader('Content-Disposition',`attachment; filename=${fileName}`)
-    res.send(fileData)
+    res.json(fileData)
 }
