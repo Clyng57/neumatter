@@ -12,8 +12,7 @@ export default async function sendFile (req, res) {
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
-    res.status(200)
-    res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
+    res.setHeader('Content-Disposition',`attachment; filename=${fileName}`)
     res.end(fileData)
         /*
       f.writeFile(filePath, data, (err) => {
