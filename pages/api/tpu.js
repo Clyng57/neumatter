@@ -14,8 +14,6 @@ export default async function sendFile (req, res) {
     const fileString = fileBuffer.toString().replace(/fill="[^"]*"/g, color)
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
-    fs.writeFile(filePath.replace('.svg', '.png'), fileData, (err) => {
-      if (err) throw err
-      return res.status(200).send('neumatter.com/tpu-logo.png')
-    })
+    res.setHeader('Content-Disposition',`filename=${fileName}`)
+    res.send(fileData)
 }
