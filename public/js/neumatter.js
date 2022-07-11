@@ -100,4 +100,21 @@ if (colorSelector) {
     tpuLink.setAttribute('href', `/api/tpu?${searchParams.toString()}`)
     console.log(searchParams.toString())
   })
+
+  tpuLink.addEventListener('click', (e) => {
+    e.preventDefault()
+      async function downloadImage() {
+      const image = await fetch(tpuLink.getAttribute('href'))
+      const imageBlog = await image.blob()
+      const imageURL = URL.createObjectURL(imageBlog)
+  
+      const link = document.createElement('a')
+      link.href = imageURL
+      link.download = 'tpu-logo.png'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+    downloadImage().catch(err => console.error(err))
+  })
 }
