@@ -34,6 +34,9 @@ export default function DocumentationInput() {
 		c3.2-4.3,4.9-10.6,4.9-18.9l0.1-85.7H293l0.1,85.7C293.2,104.2,292.2,110.7,290.1,116.9z"/>
     </g>
   </svg>
+  <Link href="/api/tpu">
+    <a></a>
+  </Link>
     <button id="tpuLink" nuHref="/api/tpu" className="c-btn c-btn-primary">Download</button>
   </div>
 </form>
