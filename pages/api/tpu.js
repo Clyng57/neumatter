@@ -14,7 +14,7 @@ export default async function sendFile (req, res) {
     const fileData = await convert(data, { width: 1273, height: 640 })
     res.status(200)
     res.setHeader('Content-Disposition',`attachment; filename=${fileName}`);
-    await res.send(fileData)
+    res.end(fileData)
         /*
       f.writeFile(filePath, data, (err) => {
         if (err) throw err
