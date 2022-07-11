@@ -85,7 +85,6 @@ navTabs.each(navTab => {
 const colorSelector = document.querySelector('#color')
 const tpuPathOne = document.querySelector('#tpuPathOne')
 const tpuPathTwo = document.querySelector('#tpuPathTwo')
-const tpuLink = document.querySelector('#tpuLink')
 
 if (colorSelector) {
   console.log(colorSelector.value)
@@ -93,28 +92,5 @@ if (colorSelector) {
     console.log(colorSelector.value)
     tpuPathOne.setAttribute('fill', colorSelector.value)
     tpuPathTwo.setAttribute('fill', colorSelector.value)
-    const tpuHref = tpuLink.getAttribute('nuHref').replace(/^[^?]*/, '')
-    const searchParams = new URLSearchParams(tpuHref ? tpuHref : undefined)
-    searchParams.delete('color')
-    searchParams.append('color', colorSelector.value.replace('#', ''))
-    tpuLink.setAttribute('nuHref', `/api/tpu?${searchParams.toString()}`)
-    console.log(searchParams.toString())
-  })
-
-  tpuLink.addEventListener('click', (e) => {
-    e.preventDefault()
-      async function downloadImage() {
-      const image = await fetch(tpuLink.getAttribute('nuHref'))
-      const imageBlog = await image.blob()
-      const imageURL = URL.createObjectURL(imageBlog)
-  
-      const link = document.createElement('a')
-      link.href = imageURL
-      link.download = 'tpu-logo.png'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-    }
-    downloadImage().catch(err => console.error(err))
   })
 }
