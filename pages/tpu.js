@@ -35,7 +35,7 @@ export default function DocumentationInput() {
     </g>
   </svg>
   <Link href="/api/tpu" >
-    <a id="tpuLink" href="/api/tpu" className="c-btn c-btn-primary">Download</a>
+    <a id="tpuLink" className="c-btn c-btn-primary">Download</a>
   </Link>
   </div>
 </form>
