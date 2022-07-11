@@ -1,6 +1,7 @@
 import path from 'path'
 import f from 'fs/promises'
 import { convert } from 'convert-svg-to-png'
+import stream from 'stream'
 
 export default async function sendFile (req, res) {
     console.log(req.url)
@@ -13,7 +14,8 @@ export default async function sendFile (req, res) {
     const data = fileString
     const fileData = await convert(data, { width: 1273, height: 640 })
     res.setHeader('Content-Disposition',`attachment; filename=${fileName}`)
-    res.end(fileData)
+    const str = stream.Readable.from(fileData)
+    str.pipe(res)
         /*
       f.writeFile(filePath, data, (err) => {
         if (err) throw err
